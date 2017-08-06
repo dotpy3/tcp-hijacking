@@ -21,7 +21,7 @@ func main() {
 		port = defaultPort
 	}
 
-	l, err := net.Listen("tcp", fmt.Sprintf("localhost:%s", port))
+	l, err := net.Listen("tcp", fmt.Sprintf("0.0.0.0:%s", port))
 	if err != nil {
 		handleFatalError(err)
 	}
